@@ -81,16 +81,14 @@ python train/baseline.py \
 
 ## 📈 Example Results (Speechocean762)
 
-The table below reproduces **Figure 1 / Table I** from our APSIPA 2024 paper:
+The table below reproduces **Table I** from our paper:
 
-- **Bold** values indicate the best model among the three fine-tuning strategies:  
-  **Train All**, **With CTC**, and **Freeze Feature Extractor (FE)**.
-- Asterisks (*) mark the best model overall for each metric.
+- **Bold** values indicate the best model overall for each metric.
 
 | Model               | Accuracy (No CTC) | Accuracy (CTC) | Accuracy (Freeze FE) | Fluency (No CTC) | Fluency (CTC) | Fluency (Freeze FE) | Prosodic (No CTC) | Prosodic (CTC) | Prosodic (Freeze FE) | Total (No CTC) | Total (CTC) | Total (Freeze FE) |
 |--------------------|------------------|----------------|-----------------------|------------------|----------------|----------------------|-------------------|----------------|------------------------|----------------|-------------|---------------------|
 | w2v2-large         | 0.691            | 0.688          | 0.694                | **0.794**        | 0.787         | 0.782                | **0.786**         | 0.785          | 0.776                  | 0.728          | 0.718       | 0.723               |
-| w2v2-large-960h    | *0.706*          | 0.708          | 0.702                | 0.773            | 0.770         | 0.774                | 0.773             | 0.771          | 0.775                  | *0.734*        | 0.729       | 0.727               |
+| w2v2-large-960h    | **0.706**          | 0.708          | 0.702                | 0.773            | 0.770         | 0.774                | 0.773             | 0.771          | 0.775                  | **0.734**        | 0.729       | 0.727               |
 | w2v2-large-lv60    | 0.623            | 0.666          | 0.649                | 0.676            | 0.720         | 0.749                | 0.672             | 0.730          | 0.742                  | 0.642          | 0.686       | 0.679               |
 | w2v2-xlsr-53       | 0.678            | 0.691          | 0.645                | 0.740            | 0.752         | 0.694                | 0.734             | 0.751          | 0.691                  | 0.694          | 0.706       | 0.664               |
 | w2v2-xls-r-300m    | 0.633            | 0.649          | 0.661                | 0.693            | 0.705         | 0.735                | 0.681             | 0.692          | 0.727                  | 0.647          | 0.663       | 0.679               |
@@ -107,6 +105,7 @@ The table below reproduces **Figure 1 / Table I** from our APSIPA 2024 paper:
 ## 📊 PCA-Based Intrinsic Analysis
 
 We propose a novel intrinsic interpretability method based on **PCA of hidden representations**.
+![image](https://github.com/user-attachments/assets/4a62e417-7ff2-4023-971a-a7acc4df1867)
 
 <img src="https://raw.githubusercontent.com/hy310/ssl_finetuning/main/analysis/figure/pca_3d_example.png" width="400"/>
 
