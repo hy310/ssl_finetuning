@@ -57,8 +57,7 @@ pip install -r requirements.txt
 ```
 
 ### 2. Dataset
-
-This repository uses the [**Speechocean762**](https://www.openslr.org/103/) corpus.  
+This repository uses the [**Speechocean762**](https://openslr.org/101/) corpus.  
 Make sure to preprocess and store it in the following structure:
 
 ```
@@ -70,24 +69,15 @@ Make sure to preprocess and store it in the following structure:
 
 ### 3. Fine-tuning
 
-To fine-tune a model (e.g., `hubert-xlarge` with CTC):
+To fine-tune a model (e.g., `hubert-xlarge` without CTC):
 
 ```bash
-python train/train_ctc.py \
+python train/baseline.py \
   --model_name facebook/hubert-xlarge-ls960-ft \
   --batch_size 4 \
   --learning_rate 1e-5 \
   --num_train_epochs 30
 ```
-
-### 4. Evaluation
-
-```bash
-python test/evaluate_model.py \
-  --model_path /path/to/saved/model.pt
-```
-
----
 
 ## 📈 Example Results (Speechocean762)
 
