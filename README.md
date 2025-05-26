@@ -1,4 +1,4 @@
-# Analysis of Various Self-Supervised Learning Models for Automatic Pronunciation Assessment (APSIPA 2024)
+# Analysis of Various Self-Supervised Learning Models for Automatic Pronunciation Assessment (APSIPA ASC 2024)
 
 This repository contains the official codebase for the paper:
 
