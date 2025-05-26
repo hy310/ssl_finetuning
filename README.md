@@ -120,12 +120,13 @@ We propose a novel intrinsic interpretability method based on **PCA of hidden re
 If you use this repository or our findings, please cite:
 
 ```bibtex
-@inproceedings{lee2024sslapa,
-  title     = {Analysis of Various Self-Supervised Learning Models for Automatic Pronunciation Assessment},
-  author    = {Haeyoung Lee and Sunhee Kim and Minhwa Chung},
-  booktitle = {APSIPA Annual Summit and Conference (APSIPA ASC)},
-  year      = {2024},
-  doi       = {10.1109/APSIPAASC63619.2025.10848954}
+@inproceedings{lee2024analysis,
+  title={Analysis of Various Self-Supervised Learning Models for Automatic Pronunciation Assessment},
+  author={Lee, Haeyoung and Kim, Sunhee and Chung, Minhwa},
+  booktitle={2024 Asia Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)},
+  pages={1--6},
+  year={2024},
+  organization={IEEE}
 }
 ```
 
