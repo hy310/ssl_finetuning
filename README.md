@@ -1,4 +1,4 @@
-# SSL Fine-Tuning for Automatic Pronunciation Assessment (APSIPA 2024)
+# Analysis of Various Self-Supervised Learning Models for Automatic Pronunciation Assessment (APSIPA 2024)
 
 This repository contains the official codebase for the paper:
 
@@ -7,7 +7,7 @@ This repository contains the official codebase for the paper:
 > Accepted at **APSIPA ASC 2024 (Asia-Pacific Signal and Information Processing Association Annual Summit and Conference)**
 
 📄 [**Read the Paper (PDF)**](./Analysis_of_Various_Self-Supervised_Learning_Models_for_Automatic_Pronunciation_Assessment.pdf)  
-🔍 [**Google Scholar Link**](https://scholar.google.com) *(update once available)*  
+🔍 [**Google Scholar Link**]([https://scholar.google.com](https://ieeexplore.ieee.org/abstract/document/10848954)) *(update once available)*  
 📌 DOI: [10.1109/APSIPAASC63619.2025.10848954](https://doi.org/10.1109/APSIPAASC63619.2025.10848954)
 
 ---
