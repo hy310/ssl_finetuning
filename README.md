@@ -81,9 +81,11 @@ python train/baseline.py \
 
 ## 📈 Example Results (Speechocean762)
 
-The table below reproduces **Table I** from our paper:
+The table below reproduces **Table I** from our paper and presents the **Pearson Correlation Coefficient (PCC)** between model-predicted scores and human annotations across four aspects of pronunciation: **Accuracy**, **Fluency**, **Prosody**, and **Total**.
 
 - **Bold** values indicate the best model overall for each metric.
+> Higher PCC values indicate stronger correlation between predicted and true pronunciation scores, reflecting better assessment performance.
+
 
 | Model               | Accuracy (No CTC) | Accuracy (CTC) | Accuracy (Freeze FE) | Fluency (No CTC) | Fluency (CTC) | Fluency (Freeze FE) | Prosodic (No CTC) | Prosodic (CTC) | Prosodic (Freeze FE) | Total (No CTC) | Total (CTC) | Total (Freeze FE) |
 |--------------------|------------------|----------------|-----------------------|------------------|----------------|----------------------|-------------------|----------------|------------------------|----------------|-------------|---------------------|
