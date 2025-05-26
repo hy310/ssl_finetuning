@@ -105,9 +105,9 @@ The table below reproduces **Table I** from our paper:
 ## 📊 PCA-Based Intrinsic Analysis
 
 We propose a novel intrinsic interpretability method based on **PCA of hidden representations**.
-![image](https://github.com/user-attachments/assets/4a62e417-7ff2-4023-971a-a7acc4df1867)
 
-<img src="https://raw.githubusercontent.com/hy310/ssl_finetuning/main/analysis/figure/pca_3d_example.png" width="400"/>
+<img src="https://github.com/user-attachments/assets/4a62e417-7ff2-4023-971a-a7acc4df1867" width="400"/>
+
 
 - **Conical (Wav2Vec2.0)**: emphasizes score continuity
 - **V-shape (HuBERT)**: two-axis decision
