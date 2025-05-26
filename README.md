@@ -15,7 +15,7 @@ This repository contains the official codebase for the paper:
 This repository provides code and experimental setups for analyzing and fine-tuning **Self-Supervised Learning (SSL)** speech models for **Automatic Pronunciation Assessment (APA)**.  
 We evaluate 12 pretrained SSL models (Wav2Vec2.0, HuBERT, WavLM) under three fine-tuning strategies:
 
-- **CTC Head**  
+- **with CTC Head**  
 - **Freezing CNN Feature Extractor**  
 - **No CTC / General Feature Extraction**
 
@@ -25,7 +25,7 @@ The study further introduces a novel **PCA-based intrinsic analysis** method tha
 
 ## 📊 Key Contributions
 
-- First **systematic benchmark** of SSL models for APA
+- First **systematic analysis** of SSL models for APA
 - Comparison of 12 SSL variants using Speechocean762 dataset
 - Dual **extrinsic and intrinsic analysis** of performance and scoring behavior
 - PCA-based visualization of hidden representation structures
@@ -41,8 +41,7 @@ ssl_finetuning/
 ├── test/                    # Evaluation scripts
 ├── analysis/                # PCA, score correlation, and visualization
 ├── calculate_pcc/           # PCC computation utilities
-├── requirements.txt         # Dependency list
-└── *.ipynb                  # Jupyter notebooks used for figure generation
+└── requirements.txt         # Dependency list
 ```
 
 ---
