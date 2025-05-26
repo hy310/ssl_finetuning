@@ -6,8 +6,7 @@ This repository contains the official codebase for the paper:
 > *Haeyoung Lee, Sunhee Kim, Minhwa Chung*  
 > Accepted at **APSIPA ASC 2024 (Asia-Pacific Signal and Information Processing Association Annual Summit and Conference)**
 
-📄 [**Read the Paper**]([https://ieeexplore.ieee.org/abstract/document/10848954)
-📌 DOI: [10.1109/APSIPAASC63619.2025.10848954](https://doi.org/10.1109/APSIPAASC63619.2025.10848954)
+📄 [**Read the Paper**](https://ieeexplore.ieee.org/abstract/document/10848954)
 
 ---
 
