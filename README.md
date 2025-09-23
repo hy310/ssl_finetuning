@@ -92,7 +92,7 @@ python train/freeze.py \
   --num_train_epochs 30
 ```
 
-## 🤗 Pretrained Models
+## 🤗 Fine-tuned Models
 
 The fine-tuned models introduced in our paper are available on the Hugging Face Hub:
   
