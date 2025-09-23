@@ -93,42 +93,29 @@ python train/freeze.py \
 ## 🤗 Pretrained Models
 
 The fine-tuned models introduced in our paper are available on the Hugging Face Hub:
-
-- [**haeylee/ssl_ft_pron**](https://huggingface.co/haeylee/ssl_ft_pron)
-
   
 - **Model Hub**: https://huggingface.co/haeylee/ssl_ft_pron
 
 > The repository contains multiple subdirectories (e.g., `wav2vec2/general/01_wav2vec2-large`, `wav2vec2/general/02_wav2vec2-large-960h`, …). Pick the subdirectory corresponding to the variant you want to load.
 
-### A) CTC Models (with CTC head)
+You can directly load a model checkpoint with the 🤗 Transformers library. For example:
 
+### A) CTC Models (with CTC head)
+```python
     from transformers import AutoModelForCTC, AutoProcessor
     model = AutoModelForCTC.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/ctc/01_wav2vec2-large")
     processor = AutoProcessor.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/ctc/01_wav2vec2-large")
-
-### B) General / Freeze Models (No CTC head)
-
-These models are encoder-based and predict continuous scores with a regression head. Load the encoder first, then attach a small linear layer (4-dim output):
-
-    from transformers import Wav2Vec2Model, HubertModel, WavLMModel
-    encoder = Wav2Vec2Model.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
-    # or:
-    # encoder = HubertModel.from_pretrained(...)
-    # encoder = WavLMModel.from_pretrained(...)
-    # attach your own regression head for [Accuracy, Fluency, Prosody, Total]
-
-- **General**: trains all encoder parameters + regression head.
-- **Freeze**: trains only regression head while the encoder’s CNN feature extractor is frozen. (Inference loading is the same as General.)
-
-You can directly load a model checkpoint with the 🤗 Transformers library. For example:
-
-```python
-from transformers import AutoModelForCTC, AutoProcessor
-
-model = AutoModelForCTC.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
-processor = AutoProcessor.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
 ```
+### B) General / Freeze Models (No CTC head)
+```python
+    from transformers import Wav2Vec2Model, HubertModel, WavLMModel
+    model = Wav2Vec2Model.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
+    processor = AutoProcessor.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
+    # or:
+    # model = HubertModel.from_pretrained("haeylee/ssl_ft_pron/hubert/freeze/06_hubert-large-ll60k")
+    # processor = AutoProcessor.from_pretrained("haeylee/ssl_ft_pron/hubert/freeze/06_hubert-large-ll60k")
+```
+
 
 ## 📈 Example Results (Speechocean762)
 
