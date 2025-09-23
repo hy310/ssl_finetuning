@@ -92,7 +92,7 @@ from transformers import AutoModelForCTC, AutoProcessor
 
 model = AutoModelForCTC.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
 processor = AutoProcessor.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
-
+```
 
 ## 📈 Example Results (Speechocean762)
 
