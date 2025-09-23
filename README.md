@@ -79,6 +79,21 @@ python train/baseline.py \
   --num_train_epochs 30
 ```
 
+## 🤗 Pretrained Models
+
+The fine-tuned models introduced in our paper are available on the Hugging Face Hub:
+
+- [**haeylee/ssl_ft_pron**](https://huggingface.co/haeylee/ssl_ft_pron)
+
+You can directly load a model checkpoint with the 🤗 Transformers library. For example:
+
+```python
+from transformers import AutoModelForCTC, AutoProcessor
+
+model = AutoModelForCTC.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
+processor = AutoProcessor.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
+
+
 ## 📈 Example Results (Speechocean762)
 
 The table below reproduces **Table I** from our paper and presents the **Pearson Correlation Coefficient (PCC)** between model-predicted scores and human annotations across four aspects of pronunciation: **Accuracy**, **Fluency**, **Prosody**, and **Total**.
