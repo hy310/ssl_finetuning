@@ -79,11 +79,47 @@ python train/baseline.py \
   --num_train_epochs 30
 ```
 
+To fine-tune the same model **with frozen CNN feature extractor** (Freeze mode):
+
+```bash
+python train/freeze.py \
+  --model_name facebook/hubert-xlarge-ls960-ft \
+  --freeze_feature_extractor \
+  --batch_size 4 \
+  --learning_rate 1e-5 \
+  --num_train_epochs 30
+```
+
 ## 🤗 Pretrained Models
 
 The fine-tuned models introduced in our paper are available on the Hugging Face Hub:
 
 - [**haeylee/ssl_ft_pron**](https://huggingface.co/haeylee/ssl_ft_pron)
+
+  
+- **Model Hub**: https://huggingface.co/haeylee/ssl_ft_pron
+
+> The repository contains multiple subdirectories (e.g., `wav2vec2/general/01_wav2vec2-large`, `wav2vec2/general/02_wav2vec2-large-960h`, …). Pick the subdirectory corresponding to the variant you want to load.
+
+### A) CTC Models (with CTC head)
+
+    from transformers import AutoModelForCTC, AutoProcessor
+    model = AutoModelForCTC.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/ctc/01_wav2vec2-large")
+    processor = AutoProcessor.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/ctc/01_wav2vec2-large")
+
+### B) General / Freeze Models (No CTC head)
+
+These models are encoder-based and predict continuous scores with a regression head. Load the encoder first, then attach a small linear layer (4-dim output):
+
+    from transformers import Wav2Vec2Model, HubertModel, WavLMModel
+    encoder = Wav2Vec2Model.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
+    # or:
+    # encoder = HubertModel.from_pretrained(...)
+    # encoder = WavLMModel.from_pretrained(...)
+    # attach your own regression head for [Accuracy, Fluency, Prosody, Total]
+
+- **General**: trains all encoder parameters + regression head.
+- **Freeze**: trains only regression head while the encoder’s CNN feature extractor is frozen. (Inference loading is the same as General.)
 
 You can directly load a model checkpoint with the 🤗 Transformers library. For example:
 
