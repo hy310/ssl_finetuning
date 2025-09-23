@@ -58,6 +58,8 @@ pip install -r requirements.txt
 
 ### 2. Dataset
 This repository uses the [**Speechocean762**](https://openslr.org/101/) corpus.  
+We **preprocessed the dataset using `preprocess_dataset.py`**.  
+
 Make sure to preprocess and store it in the following structure:
 
 ```
