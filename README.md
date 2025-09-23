@@ -102,18 +102,18 @@ You can directly load a model checkpoint with the 🤗 Transformers library. For
 
 ### A) CTC Models (with CTC head)
 ```python
-    from transformers import AutoModelForCTC, AutoProcessor
-    model = AutoModelForCTC.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/ctc/01_wav2vec2-large")
-    processor = AutoProcessor.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/ctc/01_wav2vec2-large")
+from transformers import AutoModelForCTC, AutoProcessor
+model = AutoModelForCTC.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/ctc/01_wav2vec2-large")
+processor = AutoProcessor.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/ctc/01_wav2vec2-large")
 ```
 ### B) General / Freeze Models (No CTC head)
 ```python
-    from transformers import Wav2Vec2Model, HubertModel, WavLMModel
-    model = Wav2Vec2Model.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
-    processor = AutoProcessor.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
-    # or:
-    # model = HubertModel.from_pretrained("haeylee/ssl_ft_pron/hubert/freeze/06_hubert-large-ll60k")
-    # processor = AutoProcessor.from_pretrained("haeylee/ssl_ft_pron/hubert/freeze/06_hubert-large-ll60k")
+from transformers import Wav2Vec2Model, HubertModel, WavLMModel
+model = Wav2Vec2Model.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
+processor = AutoProcessor.from_pretrained("haeylee/ssl_ft_pron/wav2vec2/general/01_wav2vec2-large")
+# or:
+# model = HubertModel.from_pretrained("haeylee/ssl_ft_pron/hubert/freeze/06_hubert-large-ll60k")
+# processor = AutoProcessor.from_pretrained("haeylee/ssl_ft_pron/hubert/freeze/06_hubert-large-ll60k")
 ```
 
 
