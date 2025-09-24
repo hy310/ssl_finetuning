@@ -126,7 +126,8 @@ The table below reproduces **Table I** from our paper and presents the **Pearson
 - **Bold** values indicate the best model overall for each metric.
 > Higher PCC values indicate stronger correlation between predicted and true pronunciation scores, reflecting better assessment performance.
 
-<small><small>
+<small>
+
 | Model               | Acc (No CTC) | Acc (CTC) | Acc (Freeze) | Flu (No CTC) | Flu (CTC) | Flu (Freeze) | Pros (No CTC) | Pros (CTC) | Pros (Freeze) | Total (No CTC) | Total (CTC) | Total (Freeze) |
 |--------------------|---------------|-----------|--------------|--------------|-----------|--------------|---------------|------------|---------------|----------------|-------------|----------------|
 | w2v2-large         | 0.691         | 0.688     | 0.694        | **0.794**    | 0.787     | 0.782        | **0.786**     | 0.785      | 0.776         | 0.728          | 0.718       | 0.723          |
@@ -142,7 +143,7 @@ The table below reproduces **Table I** from our paper and presents the **Pearson
 | wlm-base-plus      | 0.603         | 0.636     | 0.653        | 0.686        | 0.701     | 0.716        | 0.681         | 0.696      | 0.708         | 0.632          | 0.653       | 0.673          |
 | wlm-base-plus-sv   | 0.649         | 0.641     | 0.656        | 0.697        | 0.713     | 0.716        | 0.687         | 0.698      | 0.714         | 0.667          | 0.664       | 0.680          |
 
-</small></small>
+</small>
 
 
 
